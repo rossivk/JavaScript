@@ -1,1 +1,1 @@
-# JavaScriptFundumentals
+# JavaScriptFundamentals
