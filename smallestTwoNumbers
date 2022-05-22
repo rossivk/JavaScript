@@ -1,0 +1,14 @@
+function smallestTwoNumbers(array) {
+
+  let sortedArray = array;
+
+  let compare = function (a, b) {
+    return a - b;
+  }
+
+  sortedArray.sort(compare);
+
+  let smallestTwoNum = sortedArray.slice(0, 2);
+
+  console.log(smallestTwoNum.join(' '));
+}
