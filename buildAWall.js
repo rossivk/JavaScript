@@ -19,10 +19,14 @@ function buildAWall(wallHeight) {
     }
   }
   
-  let totalConcreteUsed = 0;
-  for (let index = 0; index < usedConcrete.length; index++) {
-    totalCost += usedConcrete[index];
-  }
+  let totalConcreteUsed = usedConcrete.reduce((a, b) => a + b); //to get the sum we are using .reduce
+  
+//Initially I used a for loop as didn't know the reduce metod yet.
+//   let totalConcreteUsed = 0;
+//   for (let index = 0; index < usedConcrete.length; index++) {
+//     totalCost += usedConcrete[index];
+//   }
+  
   console.log(usedConcrete.join(', '));
   console.log(`${totalConcreteUsed * 1900} pesos`);
 }
