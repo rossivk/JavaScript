@@ -1,8 +1,7 @@
 function firstBit(number) {
-    function dec2bin(dec) {
-        return (dec >>> 0).toString(2);
-    }
-    const binNumber = dec2bin(number)
+  
+    const binNumber = Number(number).toString(2);
+   
     console.log(binNumber.charAt(binNumber.length - 2));
 }
 
