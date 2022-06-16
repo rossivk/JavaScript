@@ -14,10 +14,8 @@ function storage(array) {
         }
     });
 
-    const storeArray = Array.from(store.entries());
-
-    for (const array1 of storeArray) {
-        console.log(`${array1[0]} -> ${array1[1]}`);
+  for (const kvp of store.entries()) {
+        console.log(`${kvp[0]} -> ${kvp[1]}`);
     }
 }
 
