@@ -1,0 +1,26 @@
+function meetings(array) {
+    const meetingList = {};
+
+    for (const line of array) {
+        const [day, name] = line.split(' ');
+
+        if (meetingList.hasOwnProperty(day)) {
+            console.log(`Conflict on ${day}!`);
+        } else {
+            console.log(`Scheduled for ${day}`);
+            meetingList[day] = name;
+        }
+    }
+
+    for (const key of Object.keys(meetingList)) {
+        console.log(`${key} -> ${meetingList[key]}`);
+    }
+
+}
+
+meetings(['Monday Peter',
+    'Wednesday Bill',
+    'Monday Tim',
+    'Friday Tim']
+
+)
