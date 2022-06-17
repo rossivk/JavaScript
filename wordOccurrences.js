@@ -12,7 +12,7 @@ function words(array) {
         }
     }
 
-    const wordSort = new Map([...word.entries()].sort((a, b) => b[1] - a[1]));
+    const wordSort = Array.from(word.entries()).sort((a, b) => b[1] - a[1]);
 
     for (const kvp of wordSort) {
         console.log(`${kvp[0]} -> ${kvp[1]} times`)
