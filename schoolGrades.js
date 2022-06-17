@@ -2,14 +2,14 @@ function schoolGrades(array) {
     const grades = {};
 
     array.forEach(line => {
-        let personArray = line.split(' ');
+        let studentGrades = line.split(' ');
         let firstName = personArray.splice(0, 1);
 
         if (grades.hasOwnProperty(firstName)) {
-            const previousGrades = grades[firstName];
-            grades[firstName] = previousGrades.concat(personArray);
+            const studentGrades = grades[firstName];
+            grades[firstName] = previousGrades.concat(studentGrades);
         } else {
-            grades[firstName] = personArray;
+            grades[firstName] = studentGrades;
         }
     });
 
